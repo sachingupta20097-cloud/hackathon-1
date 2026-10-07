@@ -1452,8 +1452,9 @@ var PORT = process.env.PORT || 5e3;
 app.use(helmet({
   crossOriginResourcePolicy: { policy: "cross-origin" }
 }));
+var allowedOrigins = process.env.CLIENT_URL ? [process.env.CLIENT_URL, "http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:3000"] : true;
 app.use(cors({
-  origin: ["http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:3000"],
+  origin: allowedOrigins,
   credentials: true,
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization", "x-user-role", "x-user-id"]
