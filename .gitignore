@@ -4,9 +4,10 @@ node_modules/
 .pnp.js
 
 # Production builds
-dist/
+client/dist/
 build/
 *.tsbuildinfo
+!server/dist/index.js
 
 # Environment variables & secrets
 .env
