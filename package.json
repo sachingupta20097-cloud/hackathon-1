@@ -1,0 +1,16 @@
+{
+  "name": "smartflow-ai",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "server:dev": "npm --prefix server run dev",
+    "client:dev": "npm --prefix client run dev"
+  },
+  "dependencies": {
+    "zod": "^3.25.76"
+  }
+}
